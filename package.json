@@ -1,5 +1,5 @@
 {
-	"name": "black-dashboard-react",
+	"name": "firework-client",
 	"version": "1.0.0",
 	"private": true,
 	"homepage": "https://.frontier-labs.github.io/FireworkIllusion",
@@ -15,7 +15,7 @@
 		"react": "16.5.2",
 		"react-chartjs-2": "^2.7.4",
 		"react-dom": "16.5.2",
-		"react-google-maps": "9.4.5",
+		"react-google-maps": "^9.4.5",
 		"react-notification-alert": "0.0.8",
 		"react-router-dom": "4.3.1",
 		"react-scripts": "^3.2.0",
@@ -37,5 +37,9 @@
 		"not dead",
 		"not ie <= 11",
 		"not op_mini all"
-	]
+	],
+	"proxy": "http://localhost:3001",
+	"devDependencies": {
+		"browser-sync": "^2.26.7"
+	}
 }
