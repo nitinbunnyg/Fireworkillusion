@@ -46,8 +46,8 @@ let chart1_2_options = {
 					zeroLineColor: "transparent"
 				},
 				ticks: {
-					suggestedMin: 60,
-					suggestedMax: 125,
+					suggestedMin: 0,
+					suggestedMax: 100,
 					padding: 20,
 					fontColor: "#9a9a9a"
 				}
@@ -73,8 +73,8 @@ let chart1_2_options = {
 // #########################################
 // // // used inside src/views/Dashboard.jsx
 // #########################################
-let chartExample1 = {
-	data1: canvas => {
+let attendanceChart = {
+	monthlyAttendanceData: canvas => {
 		let ctx = canvas.getContext("2d");
 
 		let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
@@ -100,7 +100,7 @@ let chartExample1 = {
 			],
 			datasets: [
 				{
-					label: "My First dataset",
+					label: "Monthly Attendance",
 					fill: true,
 					backgroundColor: gradientStroke,
 					borderColor: "#1f8ef1",
@@ -114,12 +114,12 @@ let chartExample1 = {
 					pointHoverRadius: 4,
 					pointHoverBorderWidth: 15,
 					pointRadius: 4,
-					data: [100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100]
+					data: [100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 90, 100]
 				}
 			]
 		};
 	},
-	data2: canvas => {
+	courseAttendanceData: canvas => {
 		let ctx = canvas.getContext("2d");
 
 		let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
@@ -130,22 +130,17 @@ let chartExample1 = {
 
 		return {
 			labels: [
-				"JAN",
-				"FEB",
-				"MAR",
-				"APR",
-				"MAY",
-				"JUN",
-				"JUL",
-				"AUG",
-				"SEP",
-				"OCT",
-				"NOV",
-				"DEC"
+				"Algorithms Design and Analysis",
+				"Soft Computing",
+				"Machine Learning",
+				"Distributed Computing",
+				"Enterprise Programming",
+				"Aptitude Builder 2 - English",
+				"Aptitude Builder 2 - Math"
 			],
 			datasets: [
 				{
-					label: "My First dataset",
+					label: "Attendance by Course",
 					fill: true,
 					backgroundColor: gradientStroke,
 					borderColor: "#1f8ef1",
@@ -159,7 +154,7 @@ let chartExample1 = {
 					pointHoverRadius: 4,
 					pointHoverBorderWidth: 15,
 					pointRadius: 4,
-					data: [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120]
+					data: [80, 74, 88, 78, 95, 85, 90]
 				}
 			]
 		};
@@ -306,8 +301,8 @@ let chartExample3 = {
 						zeroLineColor: "transparent"
 					},
 					ticks: {
-						suggestedMin: 60,
-						suggestedMax: 120,
+						suggestedMin: 0,
+						suggestedMax: 100,
 						padding: 20,
 						fontColor: "#9e9e9e"
 					}
@@ -420,7 +415,7 @@ const chartExample4 = {
 };
 
 module.exports = {
-	chartExample1, // in src/views/Dashboard.jsx
+	attendanceChart, // in src/views/Dashboard.jsx
 	chartExample2, // in src/views/Dashboard.jsx
 	chartExample3, // in src/views/Dashboard.jsx
 	chartExample4 // in src/views/Dashboard.jsx
