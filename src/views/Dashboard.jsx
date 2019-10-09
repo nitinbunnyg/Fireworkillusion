@@ -44,7 +44,7 @@ import {
 
 // core components
 import {
-	chartExample1,
+	attendanceChart,
 	chartExample2,
 	chartExample3,
 	chartExample4
@@ -54,7 +54,7 @@ class Dashboard extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			bigChartData: "data1"
+			bigChartData: "monthlyAttendanceData"
 		};
 	}
 	setBgChartData = name => {
@@ -83,12 +83,12 @@ class Dashboard extends React.Component {
 												<Button
 													tag="label"
 													className={classNames("btn-simple", {
-														active: this.state.bigChartData === "data1"
+														active: this.state.bigChartData === "monthlyAttendanceData"
 													})}
 													color="info"
 													id="0"
 													size="sm"
-													onClick={() => this.setBgChartData("data1")}
+													onClick={() => this.setBgChartData("monthlyAttendanceData")}
 												>
 													<input
 														defaultChecked
@@ -109,9 +109,9 @@ class Dashboard extends React.Component {
 													size="sm"
 													tag="label"
 													className={classNames("btn-simple", {
-														active: this.state.bigChartData === "data2"
+														active: this.state.bigChartData === "courseAttendanceData"
 													})}
-													onClick={() => this.setBgChartData("data2")}
+													onClick={() => this.setBgChartData("courseAttendanceData")}
 												>
 													<input
 														className="d-none"
@@ -119,7 +119,7 @@ class Dashboard extends React.Component {
 														type="radio"
 													/>
 													<span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
-														Purchases
+														Courses
                           </span>
 													<span className="d-block d-sm-none">
 														<i className="tim-icons icon-gift-2" />
@@ -154,7 +154,7 @@ class Dashboard extends React.Component {
 								<CardBody>
 									<div className="chart-area">
 										<Bar
-											data={chartExample1[this.state.bigChartData]}
+											data={attendanceChart[this.state.bigChartData]}
 											options={chartExample3.options}
 										/>
 									</div>
