@@ -56,12 +56,14 @@ class Dashboard extends React.Component {
 		this.state = {
 			bigChartData: "monthlyAttendanceData"
 		};
+		sessionStorage.setItem("jwtToken", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xsX251bWJlciI6IjE3MDMzMDAyMSIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNTE2MjM5MDIyfQ.rI-MfHzDB0pX5eFEvBltoKJw_4nFTI32R9GP4Rp-RLU");
 	}
-	setBgChartData = name => {
+
+	setBgChartData(name) {
 		this.setState({
 			bigChartData: name
 		});
-	};
+	}
 	render() {
 		return (
 			<>

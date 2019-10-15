@@ -28,12 +28,47 @@ import {
 	Col
 } from "reactstrap";
 
+<<<<<<< Updated upstream
 class Attendance extends React.Component {
+=======
+class AttendanceDisplay extends React.Component {
+
+	componentDidMount() {
+		// Testing JWT
+		// ** REMOVE IN PRODUCTION
+		var jwt = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xsX251bWJlciI6IjE3MDMzMDAyMSIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNTE2MjM5MDIyfQ.rI-MfHzDB0pX5eFEvBltoKJw_4nFTI32R9GP4Rp-RLU";
+
+		fetch("http://localhost:3001/attendance/student", {
+			method: "post",
+			headers: { 'Authorization': `Bearer ${jwt}` }
+		})
+			.then(res => res.json())
+			.then(
+				(result) => {
+					this.setState({
+						isLoaded: true,
+						items: result.items
+					});
+				},
+				// Note: it's important to handle errors here
+				// instead of a catch() block so that we don't swallow
+				// exceptions from actual bugs in components.
+				(error) => {
+					this.setState({
+						isLoaded: true,
+						error
+					});
+				}
+			);
+	}
+
+
+>>>>>>> Stashed changes
 	render() {
 		return (
 			<>
 				<div className="content">
-				<Row>
+					<Row>
 						<Col md="12">
 							<Card>
 								<CardHeader>
@@ -82,4 +117,8 @@ class Attendance extends React.Component {
 	}
 }
 
+<<<<<<< Updated upstream
 export default Attendance;
+=======
+export default AttendanceDisplay;
+>>>>>>> Stashed changes

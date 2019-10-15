@@ -1,5 +1,6 @@
 {
 	"name": "firework-client",
+	"esversion": "6",
 	"version": "1.0.0",
 	"private": true,
 	"homepage": "https://.frontier-labs.github.io/FireworkIllusion",
