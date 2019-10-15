@@ -17,6 +17,7 @@
 */
 import React from "react";
 import ReactDOM from "react-dom";
+import Helmet from "react-helmet";
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch, Redirect } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -30,11 +31,16 @@ import "assets/css/nucleo-icons.css";
 const hist = createBrowserHistory();
 
 ReactDOM.render(
-	<Router history={hist}>
-		<Switch>
-			<Route path="/admin" render={props => <AdminLayout {...props} />} />
-			<Redirect from="/" to="/admin/dashboard" />
-		</Switch>
-	</Router>,
+	<>
+		<Helmet>
+			<title>Student Dashboard</title>
+		</Helmet>
+		<Router history={hist}>
+			<Switch>
+				<Route path="/admin" render={props => <AdminLayout {...props} />} />
+				<Redirect from="/" to="/admin/dashboard" />
+			</Switch>
+		</Router>
+	</>,
 	document.getElementById("root")
 );
