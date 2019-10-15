@@ -22,6 +22,7 @@ import Notifications from "views/Notifications.jsx";
 import Attendance from "views/Attendance.jsx";
 import Typography from "views/Typography.jsx";
 import UserProfile from "views/UserProfile.jsx";
+import Payments from "views/Payments.jsx";
 
 var routes = [
 	{
@@ -49,10 +50,10 @@ var routes = [
 		layout: "/admin"
 	},
 	{
-		path: "/tables",
+		path: "/attendance",
 		name: "Attendance",
 		rtlName: "قائمة الجدول",
-		icon: "tim-icons icon-puzzle-10",
+		icon: "tim-icons icon-paper",
 		component: Attendance,
 		layout: "/admin"
 	},
@@ -60,7 +61,7 @@ var routes = [
 		path: "/marks",
 		name: "Marks",
 		rtlName: "لوحة القيادة",
-		icon: "tim-icons icon-chart-pie-36",
+		icon: "tim-icons icon-trophy",
 		component: Marks,
 		layout: "/admin"
 	},
@@ -68,8 +69,16 @@ var routes = [
 		path: "/library",
 		name: "Library",
 		rtlName: "لوحة القيادة",
-		icon: "tim-icons icon-chart-pie-36",
+		icon: "tim-icons icon-book-bookmark",
 		component: Library,
+		layout: "/admin"
+	},
+	{
+		path: "/payments",
+		name: "Payments",
+		rtlName: "لوحة القيادة",
+		icon: "tim-icons icon-bank",
+		component: Payments,
 		layout: "/admin"
 	},
 	{

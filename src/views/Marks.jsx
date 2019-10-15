@@ -28,7 +28,7 @@ import {
 	Col
 } from "reactstrap";
 
-class Tables extends React.Component {
+class Marks extends React.Component {
 	render() {
 		return (
 			<>
@@ -37,7 +37,7 @@ class Tables extends React.Component {
 						<Col md="12">
 							<Card>
 								<CardHeader>
-									<CardTitle tag="h4">Your Internal Marks</CardTitle>
+									<CardTitle tag="h3">Internal Marks</CardTitle>
 								</CardHeader>
 								<CardBody>
 									<Table className="tablesorter" responsive>
@@ -93,4 +93,4 @@ class Tables extends React.Component {
 	}
 }
 
-export default Tables;
+export default Marks;

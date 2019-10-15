@@ -16,7 +16,7 @@
 
 */
 import React from "react";
-
+import Search from "../components/utils/searchbar";
 // reactstrap components
 import {
 	Card,
@@ -28,7 +28,7 @@ import {
 	Col
 } from "reactstrap";
 
-class Tables extends React.Component {
+class Library extends React.Component {
 	render() {
 		return (
 			<>
@@ -37,60 +37,28 @@ class Tables extends React.Component {
 						<Col md="12">
 							<Card>
 								<CardHeader>
-									<CardTitle tag="h4">Simple Table</CardTitle>
+									<CardTitle tag="h3">Library
+									</CardTitle>
+									<Search>
+									</Search>
 								</CardHeader>
 								<CardBody>
 									<Table className="tablesorter" responsive>
 										<thead className="text-primary">
 											<tr>
-												<th>Name</th>
-												<th>Country</th>
-												<th>City</th>
-												<th className="text-center">Salary</th>
+												<th>Book Name</th>
+												<th>Available Copies</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<td>Dakota Rice</td>
-												<td>Niger</td>
-												<td>Oud-Turnhout</td>
-												<td className="text-center">$36,738</td>
+												<td>The Theory of Everything by Stephen Hawking</td>
+												<td>3</td>
 											</tr>
 											<tr>
-												<td>Minerva Hooper</td>
-												<td>Curaçao</td>
-												<td>Sinaai-Waas</td>
-												<td className="text-center">$23,789</td>
-											</tr>
-											<tr>
-												<td>Sage Rodriguez</td>
-												<td>Netherlands</td>
-												<td>Baileux</td>
-												<td className="text-center">$56,142</td>
-											</tr>
-											<tr>
-												<td>Philip Chaney</td>
-												<td>Korea, South</td>
-												<td>Overland Park</td>
-												<td className="text-center">$38,735</td>
-											</tr>
-											<tr>
-												<td>Doris Greene</td>
-												<td>Malawi</td>
-												<td>Feldkirchen in Kärnten</td>
-												<td className="text-center">$63,542</td>
-											</tr>
-											<tr>
-												<td>Mason Porter</td>
-												<td>Chile</td>
-												<td>Gloucester</td>
-												<td className="text-center">$78,615</td>
-											</tr>
-											<tr>
-												<td>Jon Porter</td>
-												<td>Portugal</td>
-												<td>Gloucester</td>
-												<td className="text-center">$98,615</td>
+												<td>The Soul of A New Machine
+													by Tracy Kidder</td>
+												<td>8</td>
 											</tr>
 										</tbody>
 									</Table>
@@ -98,63 +66,33 @@ class Tables extends React.Component {
 							</Card>
 						</Col>
 						<Col md="12">
-							<Card className="card-plain">
+							<Card>
 								<CardHeader>
-									<CardTitle tag="h4">Table on Plain Background</CardTitle>
-									<p className="category">Here is a subtitle for this table</p>
+									<CardTitle tag="h3">Checked-Out Books
+									</CardTitle>
 								</CardHeader>
 								<CardBody>
 									<Table className="tablesorter" responsive>
 										<thead className="text-primary">
 											<tr>
-												<th>Name</th>
-												<th>Country</th>
-												<th>City</th>
-												<th className="text-center">Salary</th>
+												<th>Book Name</th>
+												<th>Date of Issue</th>
+												<th>Due Date</th>
+												<th>Status</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<td>Dakota Rice</td>
-												<td>Niger</td>
-												<td>Oud-Turnhout</td>
-												<td className="text-center">$36,738</td>
+												<td>Theory of Machines</td>
+												<td>15/09/2019</td>
+												<td>29/09/2019</td>
+												<td>Returned</td>
 											</tr>
 											<tr>
-												<td>Minerva Hooper</td>
-												<td>Curaçao</td>
-												<td>Sinaai-Waas</td>
-												<td className="text-center">$23,789</td>
-											</tr>
-											<tr>
-												<td>Sage Rodriguez</td>
-												<td>Netherlands</td>
-												<td>Baileux</td>
-												<td className="text-center">$56,142</td>
-											</tr>
-											<tr>
-												<td>Philip Chaney</td>
-												<td>Korea, South</td>
-												<td>Overland Park</td>
-												<td className="text-center">$38,735</td>
-											</tr>
-											<tr>
-												<td>Doris Greene</td>
-												<td>Malawi</td>
-												<td>Feldkirchen in Kärnten</td>
-												<td className="text-center">$63,542</td>
-											</tr>
-											<tr>
-												<td>Mason Porter</td>
-												<td>Chile</td>
-												<td>Gloucester</td>
-												<td className="text-center">$78,615</td>
-											</tr>
-											<tr>
-												<td>Jon Porter</td>
-												<td>Portugal</td>
-												<td>Gloucester</td>
-												<td className="text-center">$98,615</td>
+												<td>To Engineer is Human</td>
+												<td>19/09/2019</td>
+												<td>03/10/2019</td>
+												<td>Pending</td>
 											</tr>
 										</tbody>
 									</Table>
@@ -168,4 +106,4 @@ class Tables extends React.Component {
 	}
 }
 
-export default Tables;
+export default Library;
