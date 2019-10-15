@@ -30,6 +30,14 @@ import {
 
 class AttendanceDisplay extends React.Component {
 
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			attendance: {}
+		}
+	}
+
 	componentDidMount() {
 		// Testing JWT
 		// ** REMOVE IN PRODUCTION
@@ -44,7 +52,7 @@ class AttendanceDisplay extends React.Component {
 				(result) => {
 					this.setState({
 						isLoaded: true,
-						items: result.items
+						attendance: result
 					});
 				},
 				// Note: it's important to handle errors here
@@ -59,9 +67,32 @@ class AttendanceDisplay extends React.Component {
 			);
 	}
 
-
->>>>>>> Stashed changes
 	render() {
+
+		let tBody = (<tbody><tr className="text-center"><td>Loading...</td></tr></tbody>);
+
+		if (this.state.isLoaded) {
+			tBody = (
+				<tbody>
+					{Object.keys(this.state.attendance).map((course_id, idx) => {
+						const labs = this.state.attendance[course_id].labs_attended;
+						const lectures = this.state.attendance[course_id].lectures_attended;
+						const skilling = this.state.attendance[course_id].skilling_sessions_attended;
+						const total = labs + lectures + skilling;
+						return (
+							<tr key={idx}>
+								<td>{course_id}</td>
+								<td>{labs}</td>
+								<td>{lectures}</td>
+								<td>{skilling}</td>
+								<td>{total}</td>
+							</tr>
+						)
+					})}
+				</tbody>
+			);
+		}
+
 		return (
 			<>
 				<div className="content">
@@ -78,31 +109,11 @@ class AttendanceDisplay extends React.Component {
 												<th>Course</th>
 												<th>Lab</th>
 												<th>Theory</th>
-												<th>Practical</th>
 												<th>Skilling</th>
 												<th>Total</th>
 											</tr>
 										</thead>
-										<tbody>
-											<tr>
-												<td>ADA</td>
-											</tr>
-											<tr>
-												<td>EP</td>
-											</tr>
-											<tr>
-												<td>DC</td>
-											</tr>
-											<tr>
-												<td>ML</td>
-											</tr>
-											<tr>
-												<td>SC</td>
-											</tr>
-											<tr>
-												<td>CCA</td>
-											</tr>
-										</tbody>
+										{tBody}
 									</Table>
 								</CardBody>
 							</Card>
@@ -114,8 +125,4 @@ class AttendanceDisplay extends React.Component {
 	}
 }
 
-<<<<<<< Updated upstream
-export default Attendance;
-=======
 export default AttendanceDisplay;
->>>>>>> Stashed changes

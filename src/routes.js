@@ -18,9 +18,7 @@
 import Dashboard from "views/Dashboard.jsx";
 import Marks from "views/Marks.jsx";
 import Library from "views/Library.jsx";
-import Notifications from "views/Notifications.jsx";
 import Attendance from "views/Attendance.jsx";
-import Typography from "views/Typography.jsx";
 import UserProfile from "views/UserProfile.jsx";
 import Payments from "views/Payments.jsx";
 
@@ -30,13 +28,6 @@ var routes = [
 		name: "Dashboard",
 		icon: "tim-icons icon-chart-pie-36",
 		component: Dashboard,
-		layout: "/admin"
-	},
-	{
-		path: "/notifications",
-		name: "Notifications",
-		icon: "tim-icons icon-bell-55",
-		component: Notifications,
 		layout: "/admin"
 	},
 	{
@@ -73,13 +64,6 @@ var routes = [
 		rtlName: "لوحة القيادة",
 		icon: "tim-icons icon-bank",
 		component: Payments,
-		layout: "/admin"
-	},
-	{
-		path: "/typography",
-		name: "Typography",
-		icon: "tim-icons icon-align-center",
-		component: Typography,
 		layout: "/admin"
 	}
 ];

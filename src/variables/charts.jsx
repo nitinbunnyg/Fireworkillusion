@@ -73,8 +73,8 @@ let chart1_2_options = {
 // #########################################
 // // // used inside src/views/Dashboard.jsx
 // #########################################
-let attendanceChart = {
-	monthlyAttendanceData: canvas => {
+let mainDashboardChart = {
+	marksData: canvas => {
 		let ctx = canvas.getContext("2d");
 
 		let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
@@ -85,22 +85,16 @@ let attendanceChart = {
 
 		return {
 			labels: [
-				"JAN",
-				"FEB",
-				"MAR",
-				"APR",
-				"MAY",
-				"JUN",
-				"JUL",
-				"AUG",
-				"SEP",
-				"OCT",
-				"NOV",
-				"DEC"
+				"ADA",
+				"DC",
+				"EP",
+				"AB 2",
+				"ML",
+				"SC"
 			],
 			datasets: [
 				{
-					label: "Monthly Attendance",
+					label: "Current Course-Wise Percentage",
 					fill: true,
 					backgroundColor: gradientStroke,
 					borderColor: "#1f8ef1",
@@ -114,7 +108,7 @@ let attendanceChart = {
 					pointHoverRadius: 4,
 					pointHoverBorderWidth: 15,
 					pointRadius: 4,
-					data: [100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 90, 100]
+					data: [100, 70, 90, 70, 85, 60]
 				}
 			]
 		};
@@ -159,7 +153,14 @@ let attendanceChart = {
 			]
 		};
 	},
-	data3: canvas => {
+	options: chart1_2_options
+};
+
+let gpa_chart_options = chart1_2_options;
+gpa_chart_options.scales.yAxes[0].ticks.suggestedMin = 0;
+gpa_chart_options.scales.yAxes[0].ticks.suggestedMax = 10;
+let gpaChart = {
+	gpaData: canvas => {
 		let ctx = canvas.getContext("2d");
 
 		let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
@@ -170,22 +171,15 @@ let attendanceChart = {
 
 		return {
 			labels: [
-				"JAN",
-				"FEB",
-				"MAR",
-				"APR",
-				"MAY",
-				"JUN",
-				"JUL",
-				"AUG",
-				"SEP",
-				"OCT",
-				"NOV",
-				"DEC"
+				"Sem 1",
+				"Sem 2",
+				"Sem 3",
+				"Sem 4",
+				"Sem 5"
 			],
 			datasets: [
 				{
-					label: "My First dataset",
+					label: "GPA Progression",
 					fill: true,
 					backgroundColor: gradientStroke,
 					borderColor: "#1f8ef1",
@@ -199,14 +193,13 @@ let attendanceChart = {
 					pointHoverRadius: 4,
 					pointHoverBorderWidth: 15,
 					pointRadius: 4,
-					data: [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130]
+					data: [9.4, 8.4, 7.9, 9.1, 8.2]
 				}
 			]
 		};
 	},
-	options: chart1_2_options
-};
-
+	options: gpa_chart_options
+}
 // #########################################
 // // // used inside src/views/Dashboard.jsx
 // #########################################
@@ -415,7 +408,8 @@ const chartExample4 = {
 };
 
 module.exports = {
-	attendanceChart, // in src/views/Dashboard.jsx
+	mainDashboardChart, // in src/views/Dashboard.jsx
+	gpaChart,
 	chartExample2, // in src/views/Dashboard.jsx
 	chartExample3, // in src/views/Dashboard.jsx
 	chartExample4 // in src/views/Dashboard.jsx

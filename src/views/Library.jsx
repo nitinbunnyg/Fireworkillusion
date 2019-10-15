@@ -25,7 +25,8 @@ import {
 	CardTitle,
 	Table,
 	Row,
-	Col
+	Col,
+	Input
 } from "reactstrap";
 
 class Library extends React.Component {
@@ -37,10 +38,8 @@ class Library extends React.Component {
 						<Col md="12">
 							<Card>
 								<CardHeader>
-									<CardTitle tag="h3">Library
-									</CardTitle>
-									<Search>
-									</Search>
+									<CardTitle tag="h3">Library</CardTitle>
+									<Input placeholder="Search"></Input>
 								</CardHeader>
 								<CardBody>
 									<Table className="tablesorter" responsive>

@@ -23,6 +23,7 @@ import { Line, Bar } from "react-chartjs-2";
 
 // reactstrap components
 import {
+	Alert,
 	Button,
 	ButtonGroup,
 	Card,
@@ -44,7 +45,8 @@ import {
 
 // core components
 import {
-	attendanceChart,
+	mainDashboardChart,
+	gpaChart,
 	chartExample2,
 	chartExample3,
 	chartExample4
@@ -57,7 +59,8 @@ class AnnouncementsCard extends React.Component {
 			announcements: [
 				"CSE student Achuth Rajula, becomes world's youngest trillionaire",
 				"Only to be out done by Lord Kiriti",
-				"Lorem ipsum dolor sit amet"
+				"Lorem ipsum dolor sit amet",
+				"We didn't start the flame war"
 			],
 		}
 	}
@@ -95,15 +98,10 @@ class Dashboard extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			bigChartData: "monthlyAttendanceData"
+			bigChartData: "courseAttendanceData",
+			mainCardTitle: "Course Attendance"
 		};
 		sessionStorage.setItem("jwtToken", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xsX251bWJlciI6IjE3MDMzMDAyMSIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNTE2MjM5MDIyfQ.rI-MfHzDB0pX5eFEvBltoKJw_4nFTI32R9GP4Rp-RLU");
-	}
-
-	setBgChartData(name) {
-		this.setState({
-			bigChartData: name
-		});
 	}
 	render() {
 		return (
@@ -116,7 +114,7 @@ class Dashboard extends React.Component {
 									<Row>
 										<Col className="text-left" sm="6">
 											<h5 className="card-category">Semester IV</h5>
-											<CardTitle tag="h2">Day Attendance</CardTitle>
+											<CardTitle tag="h2">{this.state.mainCardTitle}</CardTitle>
 										</Col>
 										<Col sm="6">
 											<ButtonGroup
@@ -126,7 +124,7 @@ class Dashboard extends React.Component {
 												<Button
 													tag="label"
 													className={classNames("btn-simple", {
-														active: this.state.bigChartData === "monthlyAttendanceData"
+														active: this.state.bigChartData === "courseAttendanceData"
 													})}
 													color="info"
 													id="0"
@@ -152,7 +150,7 @@ class Dashboard extends React.Component {
 													size="sm"
 													tag="label"
 													className={classNames("btn-simple", {
-														active: this.state.bigChartData === "courseAttendanceData"
+														active: this.state.bigChartData === "marksData"
 													})}
 													onClick={() => { this.setState({ bigChartData: "marksData", mainCardTitle: "Marks" }) }}
 												>
@@ -174,9 +172,9 @@ class Dashboard extends React.Component {
 													size="sm"
 													tag="label"
 													className={classNames("btn-simple", {
-														active: this.state.bigChartData === "data3"
+														active: this.state.bigChartData === "gpaData"
 													})}
-													onClick={() => this.setState({ bigChartData: "data3" })}
+													onClick={() => this.setState({ bigChartData: "gpaData", mainCardTitle: "GPA Progression" })}
 												>
 													<input
 														className="d-none"
@@ -184,7 +182,7 @@ class Dashboard extends React.Component {
 														type="radio"
 													/>
 													<span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
-														Sessions
+														GPA
                           </span>
 													<span className="d-block d-sm-none">
 														<i className="tim-icons icon-tap-02" />
@@ -196,10 +194,17 @@ class Dashboard extends React.Component {
 								</CardHeader>
 								<CardBody>
 									<div className="chart-area">
-										<Bar
-											data={attendanceChart[this.state.bigChartData]}
-											options={chartExample3.options}
-										/>
+										{
+											this.state.bigChartData == "gpaData" ? 
+											<Line 
+												data={gpaChart[this.state.bigChartData]} 
+												options={gpaChart.options}
+											/> : 
+											<Bar
+												data={mainDashboardChart[this.state.bigChartData]}
+												options={chartExample3.options}
+											/>
+										}
 									</div>
 								</CardBody>
 							</Card>
