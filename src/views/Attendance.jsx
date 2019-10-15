@@ -28,9 +28,6 @@ import {
 	Col
 } from "reactstrap";
 
-<<<<<<< Updated upstream
-class Attendance extends React.Component {
-=======
 class AttendanceDisplay extends React.Component {
 
 	componentDidMount() {
