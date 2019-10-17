@@ -124,13 +124,13 @@ let mainDashboardChart = {
 
 		return {
 			labels: [
-				"Algorithms Design and Analysis",
-				"Soft Computing",
-				"Machine Learning",
-				"Distributed Computing",
-				"Enterprise Programming",
-				"Aptitude Builder 2 - English",
-				"Aptitude Builder 2 - Math"
+				"ADA",
+				"SC",
+				"ML",
+				"DC",
+				"EP",
+				"AB 2 - English",
+				"AB 2 - Math"
 			],
 			datasets: [
 				{

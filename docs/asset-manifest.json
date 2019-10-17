@@ -1,28 +1,27 @@
 {
   "files": {
-    "main.css": "/black-dashboard-react/static/css/main.d2d5f22b.chunk.css",
-    "main.js": "/black-dashboard-react/static/js/main.99018c25.chunk.js",
-    "main.js.map": "/black-dashboard-react/static/js/main.99018c25.chunk.js.map",
-    "runtime-main.js": "/black-dashboard-react/static/js/runtime-main.6b0f7d24.js",
-    "runtime-main.js.map": "/black-dashboard-react/static/js/runtime-main.6b0f7d24.js.map",
-    "static/css/2.9e63dcda.chunk.css": "/black-dashboard-react/static/css/2.9e63dcda.chunk.css",
-    "static/js/2.e4837468.chunk.js": "/black-dashboard-react/static/js/2.e4837468.chunk.js",
-    "static/js/2.e4837468.chunk.js.map": "/black-dashboard-react/static/js/2.e4837468.chunk.js.map",
-    "index.html": "/black-dashboard-react/index.html",
-    "precache-manifest.1188427fca8d7573525378bb43434d6e.js": "/black-dashboard-react/precache-manifest.1188427fca8d7573525378bb43434d6e.js",
-    "service-worker.js": "/black-dashboard-react/service-worker.js",
-    "static/css/2.9e63dcda.chunk.css.map": "/black-dashboard-react/static/css/2.9e63dcda.chunk.css.map",
-    "static/css/main.d2d5f22b.chunk.css.map": "/black-dashboard-react/static/css/main.d2d5f22b.chunk.css.map",
-    "static/media/anime3.png": "/black-dashboard-react/static/media/anime3.bd6820f1.png",
-    "static/media/emilyz.jpg": "/black-dashboard-react/static/media/emilyz.9fcf69e5.jpg",
-    "static/media/nucleo-icons.css": "/black-dashboard-react/static/media/nucleo.f0b489a5.woff",
-    "static/media/react-logo.png": "/black-dashboard-react/static/media/react-logo.eb6be414.png"
+    "main.css": "/FireworkIllusion/static/css/main.e841e892.chunk.css",
+    "main.js": "/FireworkIllusion/static/js/main.15f5f4a2.chunk.js",
+    "main.js.map": "/FireworkIllusion/static/js/main.15f5f4a2.chunk.js.map",
+    "runtime-main.js": "/FireworkIllusion/static/js/runtime-main.b846fd28.js",
+    "runtime-main.js.map": "/FireworkIllusion/static/js/runtime-main.b846fd28.js.map",
+    "static/css/2.619dee99.chunk.css": "/FireworkIllusion/static/css/2.619dee99.chunk.css",
+    "static/js/2.c01d6ed8.chunk.js": "/FireworkIllusion/static/js/2.c01d6ed8.chunk.js",
+    "static/js/2.c01d6ed8.chunk.js.map": "/FireworkIllusion/static/js/2.c01d6ed8.chunk.js.map",
+    "index.html": "/FireworkIllusion/index.html",
+    "precache-manifest.a8358a4f0ee1cf305afb10530e4b345a.js": "/FireworkIllusion/precache-manifest.a8358a4f0ee1cf305afb10530e4b345a.js",
+    "service-worker.js": "/FireworkIllusion/service-worker.js",
+    "static/css/2.619dee99.chunk.css.map": "/FireworkIllusion/static/css/2.619dee99.chunk.css.map",
+    "static/css/main.e841e892.chunk.css.map": "/FireworkIllusion/static/css/main.e841e892.chunk.css.map",
+    "static/media/anime3.png": "/FireworkIllusion/static/media/anime3.bd6820f1.png",
+    "static/media/nucleo-icons.css": "/FireworkIllusion/static/media/nucleo.f0b489a5.woff",
+    "static/media/react-logo.png": "/FireworkIllusion/static/media/react-logo.eb6be414.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.6b0f7d24.js",
-    "static/css/2.9e63dcda.chunk.css",
-    "static/js/2.e4837468.chunk.js",
-    "static/css/main.d2d5f22b.chunk.css",
-    "static/js/main.99018c25.chunk.js"
+    "static/js/runtime-main.b846fd28.js",
+    "static/css/2.619dee99.chunk.css",
+    "static/js/2.c01d6ed8.chunk.js",
+    "static/css/main.e841e892.chunk.css",
+    "static/js/main.15f5f4a2.chunk.js"
   ]
 }
